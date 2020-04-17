@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,700,900&display=swap');
+/* Asi se invoca a determinadas fuentes y estilos de Google Fonts */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+/* Asi se invoca a las fuentes de iconos de Font Awesome */
+
+
+body{/* Asi se define una regla para un objeto o varios por su etiqueta (tag) */
+    margin:0;/* Se elimina el margen por defecto que tiene el objeto body */
+    font-family: Raleway, Arial, sans-serif;/* Tipo de fuente */
+    font-size: 16px;/* Tamaño del texto */ 
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+h1{
+    font-weight: 900;/* Se indica el estilo de la fuente a usar */
+    font-size: 48px;
+    letter-spacing: -3px;/* Espacio entre letra y letra */
+}
+h2{
+    font-weight: 100;
+    font-size: 48px;
+    margin-bottom: 36px;
+    /*text-transform: lowercase;/* Muestra en minúsculas */
+    letter-spacing: -3px;
+}
+h3{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    /*text-transform: uppercase;/* Muestra en mayúsculas */
+}
+
+p{
+    margin-top: 0;/* Se eliminó el margen superior por defecto del párrafo */
+    margin-bottom: 24px;
+    line-height: 22px;/* Alto de línea o interlineado */
+}
+img{
+    display: block;/* en el caso de los img elimina el espacio inferior que aparece por defecto */
+}
+
+figure{
+    margin: 0;
+}
+
+a{/* Hipervinculos */
+    color:#ff0000;
+    text-decoration: none;/* Elimina el subrayado por defecto de los hipervínculos */
+}
+a:hover{/* Estado que ocurre al pasar el puntero del mouse sobre el objeto */
+    color:goldenrod;
+    text-decoration: underline;
+}
+
+#top-nav{/* Asi se define una regla para un objeto por su id (inicia con #) */
+    background-color: #333333; /* Color de fondo */
+    color: #ffffff; /* Color de texto */
+    /* padding: 15px; Distancia entre el borde y el contenido */
+}
+.container{/* Asi se define una regla para un objeto o varios por su clase
+    (inicia con .) */
+    max-width: 1200px;
+    /* Esto es el ancho máximo */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* Es para que ambos margenes sean automáticos e iguales por tanto el contenido
+    se verá centrado */
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#main-header{
+    background-color: #eeeeee;
+    position: sticky;/* para que el objeto se quede pegado en la posición definida por la propiedad top */
+    top:0;/* Top es la distancia del borde superior del objeto al borde superior de la ventana */
+    z-index: 1000;/*orden de profundidad de obj*/
+}
+#logo-text{
+    display: flex;
+    align-items: center;/* Con las dos propiedades se centra verticalmente */
+}
+#mensaje{
+    background-color: #cccccc;
+}
+#noticias{
+    background-color: #dddddd;
+}
+#aviso{
+    background-image: url('../images/aviso.JPEG');/* Imagen de fondo */
+    /* ../ es para salir de una carpeta  */
+    color:#ffffff;
+    background-size: cover; /* para que el contenedor de la imagen de fondo siempre muestre la imagen
+    completamente a lo ancho o a lo alto cubriendo siempre el contenedor */
+    background-position: right center;/* Alineamiento de la imagen de fondo (Horizontal/Vertical) */
+    background-attachment: fixed;/* Para que la imagen quede fija con respecto al navegador */
+}
+#aviso h2{/* El espacio significa dentro de */
+    text-transform: uppercase;
+}
+#eventos{
+    background-color: #eeeeee;
+}
+#empresa{
+    background-color: #333333;
+    color:#ffffff;
+}
+.row{
+    display: flex;/* por defecto pone a los objetos que contiene uno al costado
+    del otro es decir en fila */
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-wrap: wrap;/* Si el ancho del contenido desborda al contenedor, se pase
+    a la siguiente fila */
+}
+.col{
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-basis: 0;/* Se define el tamaño inicial (mínimo) */
+    flex-grow: 1;/* Para que los 3 objetos crezcan de igual ancho */
+    box-sizing: border-box;/* para que el padding no incremente el ancho */
+}
+.col-50{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.padded{
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+.img-fluid{
+    width: 100%;/* Asi se indica que el ancho del objeto sea igual al de su contenedor */
+}
+.centrado-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.texto-importante{
+    font-weight: 900;
+    color: #ffcc00;
+}
+/* M E N U  **********/
+.menu{
+    list-style: none; /* Elimina las viñetas */
+    margin:0;/* Elimina el margen por defecto de la lista */
+    padding-left: 0; /* Elimina el padding izquierdo por defecto de la lista */
+    display: flex;
+}
+.menu li a:hover{
+    text-decoration: none;
+}
+.menu-top li a{
+    padding: 10px 15px;/* arriba y abajo / izquierda y derecha  */
+    display: block;/* Para que se muestre como estilo de bloque y considere los padding (sup/inf) */
+    color:#dddddd;
+    font-size: 14px;
+}
+.menu-top li a:hover{
+    background-color: #777777;
+    color:#eeeeee;
+}
+.menu-main li a{
+    display: block;
+    padding: 30px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #555555;
+    border-bottom: solid 3px transparent;
+}
+.menu-main li a:hover{
+    color: #ff0000;
+    border-bottom: solid 3px #ff0000;/* borde inferior: estilo grosor color */
+}
+.row-expand{
+    justify-content: space-between;/* Para que los elementos contenidos dentro del objeto,
+     se separen entre ellos*/
+}
+.col-figura{
+    flex-basis: 16.66%;
+    max-width: 16.66%;
+}
+
+#irarriba{
+    font-size: 32px;
+    padding:24px 29px;
+    background-color: #ffcc00;
+    position: fixed;/*obj fijo en el nav.*/
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+}
+
+#main-footer{
+    background-color: #333333;
+    color: #eeeeee;
+    padding: 30px 0 15px 0;
+}
